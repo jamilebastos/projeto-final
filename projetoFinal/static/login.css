@@ -1,0 +1,74 @@
+:root {
+  --fundo: #0b0b0b;
+  --borda: #2c2c2c;
+  --texto: #ff0000;
+  --botao: #1a1a1a;
+  --botao-hover: #2d2d2d;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px #000;
+  background-color: #111;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: var(--texto);
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--borda);
+  border-radius: 5px;
+  background-color: #222;
+  color: var(--texto);
+  outline: none;
+}
+
+input::placeholder {
+  color: #a00;
+}
+
+button {
+  background-color: var(--botao);
+  color: var(--texto);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--botao-hover);
+}
+
+.erro {
+  color: var(--texto);
+  font-size: 0.9em;
+  margin-top: 10px;
+}

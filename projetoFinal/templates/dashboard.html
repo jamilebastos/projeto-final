@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Wayne System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <div class="user-info">
+      <span>{{ usuario }} ({{ cargo }})</span>
+      <a href="{{ url_for('logout') }}" class="logout">Sair</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="cards">
+      <div class="card">
+        <h2>Total de Itens</h2>
+        <p>{{ total_itens }}</p>
+      </div>
+      <div class="card">
+        <h2>Total de Usuários</h2>
+        <p>{{ total_usuarios }}</p>
+      </div>
+      <div class="card">
+        <h2>Funcionários</h2>
+        <p>{{ funcionarios }}</p>
+      </div>
+      <div class="card">
+        <h2>Gerentes</h2>
+        <p>{{ gerentes }}</p>
+      </div>
+      <div class="card">
+        <h2>Administradores</h2>
+        <p>{{ admins }}</p>
+      </div>
+    </div>
+
+    <a href="{{ url_for('listar_itens') }}" class="botao-itens">Ver Itens</a>
+  </main>
+</body>
+</html>

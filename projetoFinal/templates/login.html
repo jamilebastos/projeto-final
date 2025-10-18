@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Wayne System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Wayne Enterprises</h1>
+    <form method="POST">
+      <input type="email" name="Email" placeholder="Email" required>
+      <input type="password" name="Senha" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+
+      {% if erro %}
+      <p class="erro">{{ erro }}</p>
+      {% endif %}
+    </form>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+aviso: esse banco de dados foi feito em mysql
+
+
+create database empresa_wayne
+use empresa_wayne
+
+
+Create Table usuarios (
+id int auto_increment primary key,
+nome varchar(200) not null,
+email varchar(200) unique not null,
+senha varchar(100) not null,
+cargo Enum ('funcionario', 'gerente', 'administrador') Not null);
+
+create table itens (
+id int auto_increment primary key,
+nome varchar(200)not null,
+quantidade int default 0,
+descricao text );
+
+USE empresa_wayne;
+SHOW TABLES;
+DESCRIBE usuarios;
+
+INSERT INTO usuarios (nome, email, senha, cargo)
+VALUES ('bruce wayne', 'admin@wayne.com', 'bat123', 'administrador');
+
+SELECT * FROM empresa_wayne.usuarios;
+SELECT * FROM empresa_wayne.itens;
